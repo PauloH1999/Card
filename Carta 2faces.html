@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <link url="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+
+
+<style>
+body{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+#container{
+    position: relative;
+    width: 350px;
+    height: 500px;
+}
+
+#carta{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+
+#container:hover #carta{
+    transform: rotateY(180deg);
+}
+
+#frente{
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+    background-color: transparent;
+    color: white;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+}
+#atras{
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+#spin{
+
+    position: relative;
+    border: solid 20px black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: solid 20px green;
+    
+    animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+
+img{
+    height: 100%;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+
+<h1>Passe o mouse na carta</h1>
+    
+<div id="container">
+
+    <div id="carta">
+
+        <div id="frente">
+            <img src="verso.jpg" alt="">
+        </div>
+        
+        
+        <div id="atras">
+            <img src="frente.jpg" alt="">
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+</body>
+
+<script>
+
+
+
+
+
+</script>
+</html>
